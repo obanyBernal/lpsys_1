@@ -1,3 +1,16 @@
-levantar servidor
+///levantar servidor
 
 php -S localhost:8000
+
+
+/////actualizar git
+
+git status
+
+git add .
+
+git commit -m "Descripción de lo que hiciste"
+
+git push origin main
+
+
