@@ -1,8 +1,18 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9fbfc;
-  }
+  margin: 0;
+  background-color: #f1f5f9; /* Fondo general gris claro */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor principal con fondo blanco */
+.form-page {
+  background-color: white;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
   
   .form-container {
     display: flex;
@@ -13,6 +23,22 @@ body {
     margin: 0 auto;
   }
   
+  .form-columns {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .form-col {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+  }
+  
+
   .foto-upload {
     border: 2px dashed #cbd5e0;
     padding: 30px;
@@ -52,6 +78,22 @@ body {
     color: #a0aec0;
     margin: 5px 0 0;
   }
+
+  .subtitulo-formulario {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .subtitulo-formulario h3 {
+    color: #2d3748;
+    margin: 0;
+    font-size: 20px;
+  }
+  
+  .subtitulo-formulario p {
+    color: #a0aec0;
+    margin: 5px 0 0;
+  }
   
   .form-group {
     width: 100%;
@@ -65,17 +107,38 @@ body {
     font-size: 14px;
     margin-bottom: 5px;
   }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-bottom: 1px solid #cbd5e0;
-    background-color: transparent;
-    font-size: 16px;
-  }
+  /* Solo aplica a inputs de texto */
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #cbd5e0;
+  background-color: transparent;
+  font-size: 16px;
+}
   
   .form-group span {
     color: red;
   }
+
+/* Estilo específico para checkboxes */
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  resize: none;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+  
   

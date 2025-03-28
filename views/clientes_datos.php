@@ -1,27 +1,274 @@
-<?php
-
-?>
-
 <link rel="stylesheet" href="/views/css/clientes-styles.css">
 
-<div class="form-container">
-  <div class="titulo-formulario">
-    <h2>Datos Personales</h2>
-    <p>--</p>
-  </div>
+<div class="content-wrapper">
+  <section class="content">
+    <div class="container-fluid">
+      <!-- menu -->
 
-  <div class="foto-upload">
-    <p class="foto-text">FOTO CLIENTE</p>
-    <input type="file" id="foto" name="foto">
-  </div>
+      <div class="aui-core-notification-embeded-container"></div>
+      <div class="aui-core-notification-list-container"></div>
 
-  <div class="form-group">
-    <label for="cliente">Nombre del Cliente <span>*</span></label>
-    <input type="text" id="cliente" name="cliente" placeholder=" ">
-  </div>
 
-  <div class="form-group">
-    <label for="direccion">Dirección (Calle, número...)</label>
-    <input type="text" id="direccion" name="direccion" placeholder=" ">
-  </div>
+      <!----------------------------------------->
+
+      <div class="aui-application-list-generic-header">
+        <div class="aui-application-list-generic-header-button">
+          <div style="display: flex;">
+            <div tabindex="-1" class="aui-kit-actionbutton aui-kit-actionbutton-only-icon aui-kit-actionbutton-template-action-bar aui-kit-actionbutton-version-V1"> <i class="zmdi zmdi-collection-plus zmdi-hc-2x"></i>
+              <use xlink:href="#add"></use>
+
+              <div class="aui-kit-actionbutton-text"></div>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div tabindex="-1" class="aui-kit-actionbutton aui-kit-actionbutton-only-icon aui-kit-actionbutton-template-action-bar aui-kit-actionbutton-version-V1"> <i class="zmdi zmdi-email zmdi-hc-2x"></i>
+              <use xlink:href="#send"></use>
+              </svg>
+              <div class="aui-kit-actionbutton-text"></div>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div tabindex="-1" class="aui-kit-actionbutton aui-kit-actionbutton-only-icon aui-kit-actionbutton-template-action-bar aui-kit-actionbutton-version-V1"> <i class="zmdi zmdi-delete zmdi-hc-2x"></i>
+              <use xlink:href="#copy"></use>
+              </svg>
+              <div class="aui-kit-actionbutton-text"></div>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div tabindex="-1" class="aui-kit-actionbutton aui-kit-actionbutton-only-icon aui-kit-actionbutton-template-action-bar aui-kit-actionbutton-version-V1">
+              <i class="zmdi zmdi-print zmdi-hc-2x"></i>
+
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div tabindex="-1" class="aui-kit-actionbutton aui-kit-actionbutton-dropdown aui-kit-actionbutton-dropdown-template-action-bar aui-kit-actionbutton-dropdown-version-V1"><i class="zmdi zmdi-copy zmdi-hc-2x"></i>
+              <use xlink:href="#download"></use>
+
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+      <!--finaliza el menu-->
+      <div class="form-page">
+        <!-- Sección 1: Datos Personales -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Datos Personales</h2>
+            <p>--</p>
+            <div class="foto-upload">
+              <p class="foto-text">FOTO CLIENTE</p>
+              <input type="file" id="foto" name="foto">
+            </div>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label>Nombre del Cliente <span>*</span></label><input type="text" name="nombre_cliente"></div>
+              <div class="form-group"><label>Edad <span>*</span></label><input type="text" name="edad"></div>
+              <div class="form-group"><label>Dirección (Calle, número...)</label><input type="text" name="direccion"></div>
+              <div class="form-group"><label>Teléfono <span>*</span></label><input type="text" name="telefono"></div>
+            </div>
+            <div class="form-col">
+              <div class="form-group"><label>DUI <span>*</span></label><input type="text" name="dui"></div>
+              <div class="form-group"><label>Fecha <span>*</span></label><input type="text" name="fecha"></div>
+              <div class="form-group"><label>Correo Electrónico <span>*</span></label><input type="text" name="correo"></div>
+              <div class="form-group"><label>Fecha de Nacimiento <span>*</span></label><input type="text" name="fecha_nacimiento"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 2: Problemas de Salud y Tipos de Cirugía -->
+        <div class="form-container">
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="titulo-formulario">
+                <h2>Problemas de Salud</h2>
+              </div>
+              <div class="form-group"><label><input type="checkbox" name="salud[]" value="diabetes"> Diabetes</label></div>
+              <div class="form-group"><label><input type="checkbox" name="salud[]" value="hipertension"> Hipertensión</label></div>
+              <div class="form-group"><label><input type="checkbox" name="salud[]" value="asma"> Asma</label></div>
+              <div class="form-group"><label><input type="checkbox" name="salud[]" value="cardiopatias"> Cardiopatías</label></div>
+              <div class="form-group"><label><input type="checkbox" name="salud[]" value="otros"> Otros</label></div>
+            </div>
+            <div class="form-col">
+              <div class="titulo-formulario">
+                <h2>Tipos de Cirugía</h2>
+              </div>
+              <div class="form-group"><label><input type="checkbox" name="cirugia[]" value="cesarea"> Cesárea</label></div>
+              <div class="form-group"><label><input type="checkbox" name="cirugia[]" value="apendicitis"> Apendicitis</label></div>
+              <div class="form-group"><label><input type="checkbox" name="cirugia[]" value="bypass"> Bypass gástrico</label></div>
+              <div class="form-group"><label><input type="checkbox" name="cirugia[]" value="hernia"> Hernia</label></div>
+              <div class="form-group"><label><input type="checkbox" name="cirugia[]" value="otros"> Otros</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 3: Medicamentos y Antecedentes -->
+        <div class="form-container">
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="titulo-formulario">
+                <h2>Medicamentos de uso frecuente</h2>
+              </div>
+              <div class="form-group"><textarea name="medicamentos" rows="3" placeholder="Escriba aquí los medicamentos..."></textarea></div>
+            </div>
+            <div class="form-col">
+              <div class="titulo-formulario">
+                <h2>Antecedentes familiares</h2>
+              </div>
+              <div class="form-group"><label><input type="checkbox" name="antecedentes[]" value="hipertension"> Hipertensión</label></div>
+              <div class="form-group"><label><input type="checkbox" name="antecedentes[]" value="diabetes"> Diabetes</label></div>
+              <div class="form-group"><label><input type="checkbox" name="antecedentes[]" value="tiroides"> Tiroides</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 4: Graduación Anterior -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Graduación Anterior</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="subtitulo-formulario">
+                <h3>Ojo Derecho</h3>
+              </div>
+              <div class="form-group"><label>Esfera *</label><input type="text" name="esfera_od"></div>
+              <div class="form-group"><label>Cilindro *</label><input type="text" name="cilindro_od"></div>
+              <div class="form-group"><label>Eje *</label><input type="text" name="eje_od"></div>
+              <div class="form-group"><label>Adición *</label><input type="text" name="adicion_od"></div>
+            </div>
+            <div class="form-col">
+              <div class="subtitulo-formulario">
+                <h3>Ojo Izquierdo</h3>
+              </div>
+              <div class="form-group"><label>Esfera *</label><input type="text" name="esfera_oi"></div>
+              <div class="form-group"><label>Cilindro *</label><input type="text" name="cilindro_oi"></div>
+              <div class="form-group"><label>Eje *</label><input type="text" name="eje_oi"></div>
+              <div class="form-group"><label>Adición *</label><input type="text" name="adicion_oi"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 5: Graduación Actual -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Graduación Actual</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="subtitulo-formulario">
+                <h3>Ojo Derecho</h3>
+              </div>
+              <div class="form-group"><label>Esfera *</label><input type="text" name="esfera_actual_od"></div>
+              <div class="form-group"><label>Cilindro *</label><input type="text" name="cilindro_actual_od"></div>
+              <div class="form-group"><label>Eje *</label><input type="text" name="eje_actual_od"></div>
+              <div class="form-group"><label>Adición *</label><input type="text" name="adicion_actual_od"></div>
+            </div>
+            <div class="form-col">
+              <div class="subtitulo-formulario">
+                <h3>Ojo Izquierdo</h3>
+              </div>
+              <div class="form-group"><label>Esfera *</label><input type="text" name="esfera_actual_oi"></div>
+              <div class="form-group"><label>Cilindro *</label><input type="text" name="cilindro_actual_oi"></div>
+              <div class="form-group"><label>Eje *</label><input type="text" name="eje_actual_oi"></div>
+              <div class="form-group"><label>Adición *</label><input type="text" name="adicion_actual_oi"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 6: Tipo de Lente -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Tipo de Lente</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="lente[]" value="una_vision"> Una Visión</label></div>
+              <div class="form-group"><label><input type="checkbox" name="lente[]" value="bifocal"> Bifocal</label></div>
+            </div>
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="lente[]" value="multifocal"> Multifocal</label></div>
+              <div class="form-group"><label><input type="checkbox" name="lente[]" value="progresivo"> Diseño de progresivo</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 7: Materiales -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Materiales</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="material[]" value="vidrio"> Vidrio</label></div>
+              <div class="form-group"><label><input type="checkbox" name="material[]" value="resina"> Resina</label></div>
+            </div>
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="material[]" value="poli"> Policarbonato</label></div>
+              <div class="form-group"><label><input type="checkbox" name="material[]" value="alto"> Alto Índice</label></div>
+              <div class="form-group"><label><input type="checkbox" name="material[]" value="thinder"> Thinder</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 8: Tratamientos -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Tratamientos</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="polarizado"> Polarizado Blanco</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="azul_verde"> Antireflejante Azul o Verde</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="foto"> Foto Cromático</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="tinte"> Tinte</label></div>
+            </div>
+            <div class="form-col">
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="foto_azul"> Foto Cromático con Antireflejante Azul o Verde</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="transitions"> Transitions</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="transitions_azul"> Transitions con Antireflejante</label></div>
+              <div class="form-group"><label><input type="checkbox" name="tratamiento[]" value="color"> Color de Transitions</label></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 9: Aro -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Aro</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label>Marca *</label><input type="text" name="aro_marca"></div>
+              <div class="form-group"><label>Modelo *</label><input type="text" name="aro_modelo"></div>
+              <div class="form-group"><label>Tamaño</label><input type="text" name="aro_tamano"></div>
+            </div>
+            <div class="form-col">
+              <div class="form-group"><label>Color *</label><input type="text" name="aro_color"></div>
+              <div class="form-group"><label>Tipo de Aro *</label><input type="text" name="aro_tipo"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección 10: Valor -->
+        <div class="form-container">
+          <div class="titulo-formulario">
+            <h2>Valor</h2>
+          </div>
+          <div class="form-columns">
+            <div class="form-col">
+              <div class="form-group"><label>Aro *</label><input type="text" name="valor_aro"></div>
+              <div class="form-group"><label>Cristales *</label><input type="text" name="valor_cristales"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
