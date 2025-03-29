@@ -10,6 +10,7 @@
                         
     
                 <link rel="stylesheet" type="text/css" href="views/assets/bootstrap-4.5.3/dist/css/bootstrap.min.css">
+                <link rel="stylesheet" href="/views/css/clientes-styles.css">
                 
 
 

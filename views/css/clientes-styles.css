@@ -14,6 +14,16 @@ body {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
   
+.aui-profit-documents-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
   .form-container {
     display: flex;
     flex-direction: column;
@@ -139,6 +149,22 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
 }
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px; /* Espacio entre checkboxes */
+  font-size: 15px;
+  gap: 8px; /* Espacio entre checkbox y texto */
+}
+.checkbox-column h5 {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
 
+.checkbox-column {
+  padding-left: 10px;
+  padding-right: 10px;
+}
   
   
